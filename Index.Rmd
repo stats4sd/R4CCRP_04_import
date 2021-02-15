@@ -60,7 +60,7 @@ knitr::include_graphics("./images/merge2.png")
 ```
 
 ### Column names good practice
-It is best to keep your column names meaningful, yet short, and to avoid spaces, accent and other special characters, except for the dot and the underscore symbols. These probably sound a bit familiar. That's because, the rules for naming columns are basically the same as the rules for naming objects (see workbook of module 1). And this is not surprising, because columns are objects that lie within dataframes.
+It is best to keep your column names meaningful, yet short, and to avoid spaces, accent and other special characters, except for the dot and the underscore symbols. These probably sound a bit familiar. That's because, the rules for naming columns are basically the same as the rules for naming objects (see workbook of the Intro module). And this is not surprising, because columns are basically objects that lie within dataframes.
 
 As an example, a column called "Température Minimale", could be shortened to "temp.min". 
 
@@ -74,7 +74,7 @@ As said above, having missing data is totally fine. I mean, it may be an issue f
 
 Ideally the shape of your data should be thought through right from the start, at the design stage of your study, so that during data collection, your data already has the right shape. Unfortunately, things don't always go as planned, and you may not always have control over the way the data is collected. In such case, you could end up with some data that is not in the shape described above.
 
-There are two ways to deal with that. Either reshaping the data in a software like Excel, or doing so in R directly. The former is probably simpler at first, but at some point, when you are more experience with R, you should consider doing most of the work in R, so that you have a script documenting clearly what you're doing and making everything you do to that data reproducible.
+There are two ways to deal with that. Either reshaping the data in a software like Excel, or doing so in R directly. The former is probably simpler at first, but at some point, when you are more experience with R, you should consider doing most of the work in R, so that you have a script documenting clearly what you're doing and making everything you do to the data reproducible.
 
 In both cases, make sure you keep a copy of your tidied data and your original row data, in case there is any issue.
 
@@ -135,10 +135,10 @@ knitr::include_graphics("./images/rmarkdown2.PNG")
 
 R can import data from many different format and we will not cover all of them here. In particular, we will not see how to retrieve data from an SQL database, as it is slightly more advanced than the scope of this course. The following documentation  <a href="https://db.rstudio.com" target="_blank">here </a> should be a good starting point though. If you have any question related to it, don't hesitate to post it in the "Out of scope questions" forum. 
 
-For data coming from SAS, SPSS or STATA, you will have to use an external package to import your file into R. There are multiple options, but we recommend you use the package haven, which is another package included in tidyverse. What's nice with this package is that it is embedded in the RStudio importation menu, and so the method to import data works the same way as with a csv file. That is:
+For data coming from SAS, SPSS or STATA, you will have to use an external package to import your file into R. There are multiple options, but we recommend you use the package `haven`, which is another package included in tidyverse. What's nice with this package is that it is embedded in the RStudio importation menu, and so the method to import data works the same way as with a csv file. That is:
 
 
-From Rstudio, click on the `import dataset` menu. It is located at the top right of your screen if you haven't changed the default organisation of the Rstudio windows. If you've copied Andy Field's organisation, then it may be at the bottom left of your screen.
+From Rstudio, click on the `import dataset` menu. It is located at the top right of your screen if you haven't changed the default organisation of the Rstudio windows.
 ```{r echo=FALSE, out.width="100%", fig.align='left'}
 knitr::include_graphics("./images/import1.PNG")
 ```
@@ -165,8 +165,12 @@ Check your environment window for the number of rows and columns of your new obj
 knitr::include_graphics("./images/import5.PNG")
 ```
 
+Click on the triangle next to the name of your object to have an overview of the column types. Check that the columns that should be numeric are not listed as character variables (chr). If you find such issue, it probably means that there is some non-numerical character(s) somewhere in your original data that prevented R to consider the column as numeric.
+```{r echo=FALSE, out.width="60%", fig.align='left'}
+knitr::include_graphics("./images/import6bis.PNG")
+```
 
-Copy the command that R just wrote in the console (only the `read.csv()` command. The `View()` command is an interactive command that should not be on your scripts).
+Copy the command that R just wrote in the console panel (only the `read.csv()` command. The `View()` command is an interactive command that should not be on your scripts).
 ```{r echo=FALSE, out.width="80%", fig.align='left'}
 knitr::include_graphics("./images/import7.PNG")
 ```
@@ -188,12 +192,101 @@ knitr::include_graphics("./images/import10.PNG")
 ```
 
 
-Having the importation command in your R Markdown script file is important, so that the next time you open RStudio, you don't have to go through the importation process again. You can just run the command that is in your file. Next time, when you open your R Markdown, you will just need to run the R chunk and your data will be imported!
+Having the importation command in your R Markdown script file is important, so that the next time you open RStudio, you don't have to go through the importation process again. You can just run the relevant R chunk and your data will be imported!
 
 Note: you can see that the importation command contains a path to your data file. So if you move your data, for example to place it in a specific data folder in your project, you'll have to change the path.
 
 
 *Question: Follow the steps above to import the Happiness.csv file that you saved in the previous section. Check the appendix to know more about this dataset*
+
+
+
+## Quiz
+
+*Question 1*
+
+```{r Q1, echo=FALSE}
+question("Which of these statements is true?",
+  answer("RStudio is useless without R",correct=TRUE),
+  answer("R is a powerful Interactive Development Environment", message="No, RStudio is the IDE"),
+  answer("Without RStudio, you cannot use R", message="R can work very well without RStudio. It's just not that user friendly"),
+  answer("You need to install RStudio first, then you can install R", message="No, you should start by installing R"), allow_retry = TRUE,random_answer_order = TRUE
+)
+```
+
+
+
+
+```{r echo=FALSE, out.width="100%", fig.align='left'}
+knitr::include_graphics("./images/packageQuestion.JPG")
+```
+
+
+*Question 2*
+
+```{r Q2, echo=FALSE}
+question("Why is R giving an error in the above screenshot?",
+  answer("The command for reading the data is missing",message="No, it is present at the top of the file: BeanSurvey <- read.csv('bean_survey.csv')"),
+  answer("The command library(ggplot2) is missing", message="It is missing, but we don't need it, since we are not plotting anything"),
+  answer("We did not specify the name of our summary statistic", message="It's good practice to name our summary statistics indeed, but ommiting the name is not an 'error'"),
+  answer("The column names are incorrect", message="No, the column names are correct"),
+  answer("Pipes don't work within R chunks", message="pipes work very well within R chunks"),
+  answer("The project file was not created", message="We can't tell from this screenshot whether a project file was created or not. We can say that it cannot be responsible for the error though."),
+  answer("The command library(dplyr) is missing", correct=TRUE),
+  answer("The symbol used for the pipe operator is wrong", message="%>% is the right symbol for the pipe operator"),
+  answer("We are using pipes, but the data argument of each function is missing", message="The pipe command is correct. With pipes, we ommit the data argument of the function"), allow_retry = TRUE,random_answer_order = TRUE
+)
+```
+
+
+
+
+```{r echo=FALSE, out.width="100%", fig.align='left'}
+knitr::include_graphics("./images/Quiz1.PNG")
+```
+
+
+*Question 3*
+
+```{r Q3, echo=FALSE}
+question("The above R Markdown file runs fine, but is missing the point of using R Markdown. Why?",
+  answer("The comments should be part of the text outside the R chunks. That way, an R Markdown document can become a proper report",correct=TRUE),
+  answer("With R Markdown, all the libraries are already preloaded, so there's no need to have commands that load libraries!", message="No, you still need to load libraries in an R Markdown file"),
+  answer("R Markdown is made for writing R code. Ideally, we shouldn't have any text or comment in such document, so that it is reproducible", message="No, the advantage of R Markdown is that it is great for writing reproducible reports. So it should contain text"),
+  answer("The commands should all be included in the same R chunk, so that they can be run altogether. That's the beauty of R Markdown!", message="No, having all the commands inside one unique R chunk would be missing the point as well."), allow_retry = TRUE,random_answer_order = TRUE
+)
+```
+
+
+*Question 4*
+
+```{r Q4, echo=FALSE}
+question("What is important for your data if you want to import it into R? (select all that apply)",
+  answer("It should be made of one single rectangle of data",correct=TRUE),
+  answer("The column names should lie in one row only", correct=TRUE),
+  answer("There shouldn't be any gap between rows or columns", correct=TRUE),
+  answer("All the columns should have the same length, and the same for the rows", correct=TRUE),
+  answer("It shouldn't contain any merged cells", correct=TRUE), allow_retry = TRUE,random_answer_order = TRUE
+)
+```
+
+
+
+
+## Exercises
+
+
+**Exercise 1: Now that you have imported the Happiness dataset into R – let’s do a quick exercise to recap what we learnt in Modules 1-3, but writing out the code entirely in RStudio instead of online.**
+
+1.	Find the 5 countries with the lowest ‘generosity scores’  
+2.	Produce a subset of countries which have below average scores for both GDP and generosity.  
+3.	Make a plot showing the relationship between generosity and GDP per capita  
+ 
+
+**Exercise 2: Download the file below that contains the BeanSurvey dataset and the solutions for the module 3 exercises. Save these in your project folder. Import the data using RStudio menu and go through the R Markdown file to reproduce the solutions in your own machine**
+
+[Module-3-Data-and-Solutions.zip](https://github.com/stats4sd/r2020_04Quiz/raw/main/Module-3-Data-and-Solutions.zip)
+
 
 
 
@@ -205,6 +298,39 @@ The data used for the questions in this workbook comes from the World Happiness 
 In this dataset, the variables 'GDP per capita','Social support','Healthy life expectancy','Freedom to make life choices','Generosity' and 'Perceptions of corruption' are factors used to compute the Happiness Score ('Score').
 
 The methodology, as well as more information about this publication, can be found <a href="https://worldhappiness.report/ed/2019/" target="_blank">here </a>. 
+
+
+## Appendix: 'BeanSurvey' dataset 
+
+The data we are using in this session is an extract of a survey conducted in Uganda from farmers identified as growing beans.
+
+The dataset contains an extract of 50 responses to 23 of the survey questions, and has been imported to R as a data frame called `BeanSurvey`.
+
+A summary of the columns in the dataset is below.
+
+```{r, echo=FALSE,message=FALSE,warning=FALSE}
+
+
+data.frame(Column=colnames(BeanSurvey),
+           Description=c("Farmer ID","Village name","Household composition","Gender of Household Head","Age of Household Head",
+                         "Occupation of Household Head","Number of Adults within the household","Number of Children (<18) within the household","Do they grow matoke?",
+                         "Do they grow maize?","Do they grow beans?","Do they grow banana?","Do they grow cassava?",
+                         "Do they grow coffee?","Land area of farm (acres)","Labor usage","Intercrops with beans",
+                         "Household decision responsibility","Do they grow beans for sale?","Quantity of beans planted in long rain season",
+                         "Quantity of beans planted in short rain season","Quantity of beans harvested in long rain season"
+                         ,"Quantity of beans harvested in short rain season")) %>% kable()
+
+```
+
+
+Spend some time exploring the full dataset embedded below, to familiarise yourself with the columns and the type of data stored within each column. You may need to refer back to this data at times during this tutorial. Remember that R is case sensitive, so you will always have to refer to the variables in this dataset exactly as they are written in the data. There is a column in this data called "GENDERHH" but there is no column in this data called "GenderHH".
+
+```{r,echo=FALSE}
+DT::datatable(BeanSurvey)
+```
+
+(You can use the arrow keys on your keyboard to scroll right in case the data table does not fit entirely on your screen)
+
 
 ## Appendix:  Useful reference links  
 

@@ -1,0 +1,51 @@
+ID,VILLAGE,HHTYPE,GENDERHH,AGEHH,OCCUHH,ADULTS,CHILDREN,MATOKE,MAIZE,BEANS,BANANA,CASSAVA,COFFEE,LANDAREA,LABOR,INTERCROP,DECISIONS,SELLBEANS,BEANSPLANTED_LR,BEANSPLANTED_SR,BEANSHARVESTED_LR,BEANSHARVESTED_SR
+1,Kimbugu,"Female headed, no husband",female,32,Farmer,1,2,Yes,Yes,Yes,No,Yes,Yes,0.75,Uses neither hired or exchange labor,2 or more crops,Female farmer only,No,0,0,0,0
+2,Kimbugu,"Female headed, no husband",female,57,Farmer,3,3,Yes,Yes,Yes,No,Yes,Yes,0.75,Uses neither hired or exchange labor,Cassava,Female farmer only,Yes,4,4,10,0
+3,Kimbugu,Male headed one wife,male,20,Farmer,2,4,Yes,Yes,Yes,No,Yes,No,3,Uses neither hired or exchange labor,Cassava,Female farmer only,No,0,0,0,0
+4,Kimbugu,"Female headed, no husband",female,55,Farmer,3,4,Yes,Yes,Yes,No,Yes,No,0.75,Uses neither hired or exchange labor,Maize,Female farmer only,No,2,0,3,0
+5,Kimbugu,Single man,male,78,Trader,1,0,No,No,Yes,No,Yes,Yes,0.75,Uses neither hired or exchange labor,Maize,Male farmer only,Yes,1.5,2.5,20,13
+6,Kimbugu,Single man,male,42,Farmer,1,0,Yes,Yes,Yes,Yes,Yes,Yes,10,Uses hired labor,Sole crop,Male farmer only,Yes,40,40,200,100
+7,Kimbugu,"Female headed, no husband",female,28,Farmer,1,1,Yes,Yes,Yes,No,Yes,No,2,Uses neither hired or exchange labor,Sole crop,Female farmer only,No,0,3,0,0
+8,Kimbugu,Male headed one wife,male,49,Farmer,2,4,Yes,Yes,Yes,Yes,Yes,Yes,1.25,Uses neither hired or exchange labor,Sole crop,"Female farmer, consults male farmer",Yes,3,0,NA,0
+9,Kimbugu,"Female headed, no husband",female,41,Farmer,1,1,Yes,Yes,Yes,Yes,Yes,Yes,2,Uses hired labor,2 or more crops,Female farmer only,Yes,2,2,20,5
+10,Kimbugu,Male headed one wife,male,54,Farmer,3,3,Yes,Yes,Yes,Yes,Yes,Yes,2,Uses hired labor,2 or more crops,Both male and female farmer equally,Yes,3,0,30,0
+11,Kimbugu,Male headed more than one wife,male,65,Farmer,4,0,Yes,Yes,Yes,Yes,Yes,Yes,1.25,Uses neither hired or exchange labor,Sole crop,Male farmer only,No,3,2.5,10,15
+12,Kimbugu,Male headed one wife,male,63,Farmer,3,2,Yes,Yes,Yes,No,Yes,Yes,3,Uses neither hired or exchange labor,Sole crop,Both male and female farmer equally,Yes,28,0,100,0
+13,Kimbugu,Male headed one wife,male,32,Fisherman,2,3,Yes,Yes,Yes,Yes,Yes,Yes,1.25,Uses hired labor,Cassava,Female farmer only,Yes,0,1,0,2
+14,Kimbugu,Male headed more than one wife,male,29,Pitsawer,2,2,Yes,Yes,Yes,No,Yes,Yes,0.75,Uses hired labor,2 or more crops,Female farmer only,Yes,0,0,0,0
+15,Kimbugu,"Female headed, no husband",female,43,Farmer,2,3,Yes,Yes,Yes,No,Yes,Yes,0.75,Uses neither hired or exchange labor,Maize,Female farmer only,Yes,0,0,0,0
+16,Kimbugu,"Female headed, no husband",female,68,Farmer,2,1,No,Yes,Yes,No,Yes,Yes,6.5,Uses hired labor,Maize,Female farmer only,Yes,5,3.5,40,5
+17,Kimbugu,Other,male,53,Farmer,1,2,No,No,No,Yes,Yes,Yes,2,Uses neither hired or exchange labor,Sole crop,Male farmer only,No,0,0,0,0
+18,Kimbugu,"Female headed, no husband",female,39,Farmer,1,1,Yes,Yes,Yes,No,Yes,No,3,Uses neither hired or exchange labor,Cassava,Female farmer only,No,0,0,0,0
+19,Kimbugu,Male headed more than one wife,male,25,Farmer,2,2,Yes,No,Yes,No,Yes,Yes,4.25,Uses neither hired or exchange labor,Cassava,Female farmer only,No,5,0,10,0
+20,Kimbugu,"Female headed, no husband",female,44,Farmer,3,6,Yes,Yes,Yes,No,Yes,Yes,4.25,Uses neither hired or exchange labor,Maize,Female farmer only,No,NA,16,NA,50
+21,Kimbugu,Male headed one wife,male,23,Farmer,2,2,Yes,No,Yes,No,Yes,Yes,2,Uses neither hired or exchange labor,Cassava,Both male and female farmer equally,No,0,2,0,4
+22,Kimbugu,Male headed one wife,male,47,Farmer,3,4,Yes,Yes,Yes,No,Yes,Yes,10,Uses neither hired or exchange labor,2 or more crops,Female farmer only,No,10,5,30,10
+23,Kimbugu,Male headed one wife,male,32,Teacher,2,2,Yes,Yes,Yes,No,Yes,Yes,3,Uses hired labor,Sole crop,Female farmer only,Yes,20,4,90,20
+24,Kimbugu,Male headed one wife,male,26,Farmer,3,2,Yes,No,Yes,No,Yes,No,2,Uses hired labor,Bananas,Female farmer only,Yes,0,3,0,50
+25,Lwala,Male headed one wife,male,25,Farmer,2,2,Yes,Yes,Yes,No,Yes,Yes,1.25,Uses neither hired or exchange labor,Cassava,Female farmer only,No,7,4,23,0
+26,Lwala,Male headed one wife,male,29,Farmer,1,1,Yes,Yes,Yes,No,Yes,Yes,2,Uses neither hired or exchange labor,2 or more crops,Female farmer only,No,2.5,0,10,0
+27,Lwala,Male headed one wife,male,44,Farmer,1,1,Yes,Yes,Yes,No,Yes,Yes,0.75,Uses neither hired or exchange labor,Sole crop,Both male and female farmer equally,No,0,1,0,3
+28,Lwala,Male headed one wife,male,23,Farmer,2,1,Yes,Yes,Yes,No,Yes,Yes,3,Uses neither hired or exchange labor,Cassava,Female farmer only,No,0,3,0,20
+29,Lwala,Male headed one wife,male,58,Farmer,13,3,Yes,Yes,Yes,Yes,Yes,Yes,4.25,Uses both hired and exchange labor,2 or more crops,Female farmer only,Yes,5,0,10,0
+30,Lwala,"Female headed, no husband",female,69,Farmer,1,5,Yes,No,Yes,No,Yes,Yes,0.75,Uses neither hired or exchange labor,Cassava,Female farmer only,No,2,3.25,4,5
+31,Lwala,Male headed one wife,male,26,Farmer,2,5,Yes,Yes,Yes,No,Yes,Yes,1.25,Uses neither hired or exchange labor,Cassava,Female farmer only,No,4.5,0,30,0
+32,Lwala,"Female headed, no husband",female,65,Farmer,2,1,Yes,Yes,Yes,No,Yes,Yes,0.75,Uses neither hired or exchange labor,Bananas,Other,No,0,0,0,0
+33,Lwala,Male headed one wife,male,75,Farmer,2,0,Yes,No,Yes,No,Yes,Yes,0.75,Uses neither hired or exchange labor,Cassava,"Female farmer, consults male farmer",No,1,0,2,0
+34,Lwala,Male headed one wife,male,51,Farmer,2,3,Yes,Yes,Yes,No,Yes,Yes,6.5,Uses exchange labor,Sole crop,"Female farmer, consults male farmer",No,1,0.75,10,3.75
+35,Lwala,Male headed one wife,male,38,Farmer,2,3,Yes,Yes,Yes,No,Yes,Yes,1.25,Uses neither hired or exchange labor,Cassava,Female farmer only,No,2,0,10,0
+36,Lwala,Male headed one wife,male,24,Farmer,2,2,No,Yes,Yes,No,Yes,No,0.375,Uses neither hired or exchange labor,Maize,Female farmer only,No,2,2,14,20
+37,Lwala,"Female headed, no husband",female,35,Farmer,2,3,Yes,Yes,Yes,No,Yes,Yes,1.25,Uses neither hired or exchange labor,Maize,Female farmer only,No,2.5,2,11.5,4.5
+38,Lwala,Male headed one wife,male,29,Farmer,5,2,Yes,Yes,Yes,Yes,Yes,Yes,10,Uses hired labor,Maize,Both male and female farmer equally,No,NA,3,NA,NA
+39,Lwala,Female headed absentee husband,female,37,Trader,3,2,No,Yes,Yes,No,Yes,No,1.25,Uses both hired and exchange labor,Cassava,Female farmer only,Yes,0,8,0,18
+40,Lwala,Female headed absentee husband,female,45,Shop attendant,2,4,Yes,Yes,Yes,No,Yes,Yes,4.25,Uses neither hired or exchange labor,2 or more crops,Female farmer only,No,0,0,0,0
+41,Lwala,"Female headed, no husband",female,50,Farmer,2,3,No,No,Yes,No,Yes,No,0.375,Uses neither hired or exchange labor,Cassava,Female farmer only,No,0,4,0,15
+42,Lwala,Male headed more than one wife,male,23,Farmer,3,3,No,Yes,Yes,No,Yes,Yes,1.25,Uses neither hired or exchange labor,2 or more crops,Female farmer only,No,1.5,0,4,0
+43,Lwala,Male headed one wife,male,60,Farmer,4,2,Yes,No,Yes,No,Yes,Yes,0.75,Uses neither hired or exchange labor,Cassava,Both male and female farmer equally,No,2,0,7,0
+44,Lwala,Male headed one wife,male,32,Pitsawer,2,3,Yes,No,Yes,No,Yes,Yes,6.5,Uses both hired and exchange labor,2 or more crops,Female farmer only,No,5,0,9,0
+45,Lwala,Male headed one wife,male,70,Farmer,2,2,Yes,Yes,Yes,Yes,Yes,Yes,0.75,Uses neither hired or exchange labor,Other,Both male and female farmer equally,No,2.5,0,4,0
+46,Lwala,Male headed one wife,male,43,Fisherman,4,4,Yes,Yes,Yes,Yes,Yes,Yes,2,Uses neither hired or exchange labor,Cassava,Female farmer only,No,2,0,8,0
+47,Lwala,Male headed one wife,male,51,Farmer,2,2,Yes,Yes,Yes,No,Yes,Yes,1.25,Uses neither hired or exchange labor,2 or more crops,"Male farmer, consults female farmer",Yes,4,0,28,0
+48,Lwala,Male headed one wife,male,28,Farmer,2,0,Yes,Yes,Yes,No,Yes,Yes,0.375,Uses neither hired or exchange labor,Cassava,Female farmer only,Yes,0,8,0,100
+49,Lwala,Male headed one wife,male,65,Farmer,3,2,No,No,Yes,No,Yes,Yes,1.25,Uses neither hired or exchange labor,Cassava,Female farmer only,No,0.5,0.5,2.5,2
+50,Lwala,Female headed absentee husband,female,33,Fisherman,3,1,Yes,Yes,Yes,No,Yes,Yes,2,Uses neither hired or exchange labor,Bananas,Female farmer only,No,0,2,0,5
