@@ -311,7 +311,7 @@ A summary of the columns in the dataset is below.
 
 ```{r, echo=FALSE,message=FALSE,warning=FALSE}
 
-
+BeanSurvey <- read.csv("bean_survey.csv")
 data.frame(Column=colnames(BeanSurvey),
            Description=c("Farmer ID","Village name","Household composition","Gender of Household Head","Age of Household Head",
                          "Occupation of Household Head","Number of Adults within the household","Number of Children (<18) within the household","Do they grow matoke?",
@@ -319,7 +319,7 @@ data.frame(Column=colnames(BeanSurvey),
                          "Do they grow coffee?","Land area of farm (acres)","Labor usage","Intercrops with beans",
                          "Household decision responsibility","Do they grow beans for sale?","Quantity of beans planted in long rain season",
                          "Quantity of beans planted in short rain season","Quantity of beans harvested in long rain season"
-                         ,"Quantity of beans harvested in short rain season")) %>% kable()
+                         ,"Quantity of beans harvested in short rain season")) %>% knitr::kable()
 
 ```
 
