@@ -14,6 +14,7 @@ description: >
 ```{r setup, include=FALSE}
 library(learnr)
 library(tidyverse)
+library(knitr)
 tutorial_options(exercise.timelimit = 10)
 ```
 
