@@ -46,7 +46,7 @@ The R community calls it *tidy data*. Here is a nice presentation illustrating t
 You also want your column names to be at the very top, in one **single** row, and the rest of your data to start right below this first row, like in this screenshot.
 
 ```{r echo=FALSE, out.width="100%", fig.align='left'}
-knitr::include_graphics("./images/well_formatted.PNG")
+##knitr::include_graphics("./images/well_formatted.PNG")
 ```
 
 Everything in your rectangle of data should be part of your data. There's no problem with having empty cells, but these have to be empty because the corresponding values are missing. 
@@ -57,7 +57,7 @@ Everything in your rectangle of data should be part of your data. There's no pro
 ### Avoid merging cells
 In spreadsheets like Excel, it is tempting to merge cells in order to make things look nicer. The issue is that merged cells don't transfer well to other softwares. So if you want to look at your data from R or any other statistical software, don't merge your cells. Instead, copy the value in all the corresponding cells.
 ```{r echo=FALSE, out.width="80%", fig.align='left'}
-knitr::include_graphics("./images/merge2.png")
+##knitr::include_graphics("./images/merge2.png")
 ```
 
 ### Column names good practice
@@ -91,7 +91,7 @@ Note that if you don't have Excel on your computer, use any spreadsheet software
 Click on the tab of the data that you want to save. Check that the data is in the right shape, then click `File -> Save As`
 
 ```{r echo=FALSE, out.width="80%", fig.align='left'}
-knitr::include_graphics("./images/save0.png")
+##knitr::include_graphics("./images/save0.png")
 ```
 
 Choose where you want to save your file, give it a sensible names, and in `Save as types`, choose 'CSV (comma delimited)' (or similar). It is recommended to save it in the same folder as the R project.
