@@ -288,20 +288,24 @@ question("What is important for your data if you want to import it into R? (sele
 
 **Exercise 2: Download the file below that contains the BeanSurvey dataset and the solutions for the module 3 exercises. Save these in your project folder. Import the data using RStudio menu and go through the R Markdown file to reproduce the solutions in your own machine**
 
-[Module-3-Data-and-Solutions.zip](https://github.com/stats4sd/r2020_04Quiz/raw/main/Module-3-Data-and-Solutions.zip)
+[ggplot-part2-solutions.zip](https://github.com/stats4sd/R4CCRP_04_import/raw/main/ggplot-part2-solutions.zip)
 
 
 
 
 
-## Appendix: 'Happiness' dataset 
+## Appendix: 'Fallow' dataset 
 
-The data used for the questions in this workbook comes from the World Happiness Report 2019. The World Happiness Report is an annual publication of the United Nations Sustainable Development Solutions Network. It aims at ranking 156 countries by level of global happiness of their population, by doing an annual survey on their citizens.
+The Fallow dataset comes from an on station RCBD experiment looking at the effect of crop cover treatments on maize yields and striga counts.
 
-In this dataset, the variables 'GDP per capita','Social support','Healthy life expectancy','Freedom to make life choices','Generosity' and 'Perceptions of corruption' are factors used to compute the Happiness Score ('Score').
+A summary of the columns in the dataset is below.
 
-The methodology, as well as more information about this publication, can be found <a href="https://worldhappiness.report/ed/2019/" target="_blank">here </a>. 
+```{r, echo=FALSE,message=FALSE,warning=FALSE}
 
+data.frame(Column=c("rep", "plot", "treat", "yield", "striga"),
+           Description=c("repetition","plot","treatment","yield in tons per hectare","striga counts")) %>% knitr::kable()
+
+```
 
 ## Appendix: 'BeanSurvey' dataset 
 
