@@ -106,8 +106,8 @@ Finally click `Save`. You may then get a warning that you are saving only one of
 If your data comes from another statistical software like SAS, SPSS, STATA, or from an SQL database, then, your data is already in a nice format for importation.
 
 
-*Question: download the following Excel file containing data from the 2019 World Happiness Report and try to save it as a csv file, following the steps above. Call this file Happiness.csv*
-[Happiness.xlsx](https://github.com/stats4sd/r2020_04Importation/raw/main/Happiness.xlsx)
+*Question: download the following Excel file containing data from an on station experiment and try to save it as a csv file, following the steps above. Call this file Fallow.csv*
+[Fallow.xlsx](https://github.com/stats4sd/R4CCRP_04_import/raw/main/Fallow.xlsx)
 
 
 
@@ -198,7 +198,7 @@ Having the importation command in your R Markdown script file is important, so t
 Note: you can see that the importation command contains a path to your data file. So if you move your data, for example to place it in a specific data folder in your project, you'll have to change the path.
 
 
-*Question: Follow the steps above to import the Happiness.csv file that you saved in the previous section. Check the appendix to know more about this dataset*
+*Question: Follow the steps above to import the Fallow.csv file that you saved in the previous section. Have a look at the appendix to know more about this dataset*
 
 
 
@@ -277,11 +277,13 @@ question("What is important for your data if you want to import it into R? (sele
 ## Exercises
 
 
-**Exercise 1: Now that you have imported the Happiness dataset into R – let’s do a quick exercise to recap what we learnt in Modules 1-3, but writing out the code entirely in RStudio instead of online.**
+**Exercise 1: Now that you have imported the Fallow dataset into R – let’s do a quick exercise to recap what we learnt in Modules 1-3, but writing out the code entirely in RStudio instead of online.**
 
-1.	Find the 5 countries with the lowest ‘generosity scores’  
-2.	Produce a subset of countries which have below average scores for both GDP and generosity.  
-3.	Make a plot showing the relationship between generosity and GDP per capita  
+
+
+1.	Calculate the average yield and striga count for each treatment.
+2.	Create  a subset of the dataset with only the rows where the striga count is greater than 0.
+3.	Make a plot from the subset that you just created (or the full dataset if you failed to create the subset), showing the relationship between striga count and yield.
  
 
 **Exercise 2: Download the file below that contains the BeanSurvey dataset and the solutions for the module 3 exercises. Save these in your project folder. Import the data using RStudio menu and go through the R Markdown file to reproduce the solutions in your own machine**
