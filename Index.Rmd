@@ -286,9 +286,11 @@ question("What is important for your data if you want to import it into R? (sele
 3.	Make a plot from the subset that you just created (or the full dataset if you failed to create the subset), showing the relationship between striga count and yield.
  
 
-**Exercise 2: Download the file below that contains the BeanSurvey dataset and the solutions for the module 3 exercises. Save these in your project folder. Import the data using RStudio menu and go through the R Markdown file to reproduce the solutions in your own machine**
+**Exercise 2: Download the files below that contain the BeanSurvey dataset and solutions for the module 3 and module 4 exercises. Save these in your project folder. Import the data using RStudio menu and go through the R Markdown file to reproduce the solutions in your own machine**
 
 [ggplot-part2-solutions.zip](https://github.com/stats4sd/R4CCRP_04_import/raw/main/ggplot-part2-solutions.zip)
+
+[dplyr-solutions.zip](https://github.com/stats4sd/R4CCRP_04_import/raw/main/dplyr-solutions.zip)
 
 
 

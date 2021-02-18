@@ -1,0 +1,151 @@
+
+## dplyr module - Solutions
+
+Make sure the dplyr library is installed and then loaded correctly!
+
+Hopefully you have saved the data and RMD into the same folder, and created a project file for that folder. If so then the BeanSurvey dataset can be read in without modifying the code below.
+
+```{r}
+library(dplyr)
+library(ggplot2)
+BeanSurvey <- read.csv("bean_survey.csv")
+```
+
+
+**Exercise 1. retrieve the households that grow banana**
+
+** Answer
+
+Filter  is the function to use to keep only the rows that satisfy a certain condition - here the households who grow beans
+
+```{r}
+filter(BeanSurvey, BANANA=="Yes")
+```
+
+We could also have used a pipe:
+
+```{r}
+BeanSurvey %>%
+  filter(BANANA=="Yes")
+```
+
+
+**Exercise 2. Identify and correct the four mistakes that I made in the command below, to obtain the median land area of farm of all the households in the BeanSurvey dataset**
+
+```{r}
+BeanSurvey %>%
+  filter(BeanSurvey, OCCUHH="Farmer") %>%
+   sumarise(median_landArea = median(LANDAREA)
+
+```
+
+
+** Answer
+
+```{r}
+BeanSurvey %>%
+  filter(OCCUHH=="Farmer") %>%
+   summarize(median_landArea = median(LANDAREA))
+
+# 1- either BeanSurvey should be removed from filter, or the first line should be deleted
+# 2- the condition of the filter function needs a double equals
+# 3- the function summarise was misspelled
+# 4- the parenthesis of the function summarise was not closed
+```
+
+
+**Exercise 3. which are the 4 households who planted the largest quantity of beans during short rain season?**
+
+
+** Answer
+
+```{r}
+BeanSurvey %>% 
+  arrange(desc(BEANSPLANTED_SR)) %>%
+    slice(1:4)
+```
+
+
+
+**Exercise 4. What is the mean, median and standard deviation of the yield of bean per acre that households harvested during the long rain season in each village**
+
+
+**Answer
+
+The yield of beans per acre is not a column that we have in our dataset, so we need to create it. mutate() is the function to use for that. We then want summaries for each village, so we use group_by() and then summarise().
+The argument na.rm is required as there are missing values in the variable BEANSHARVESTED_LR, and therefore in yield_per_acre
+
+```{r}
+BeanSurvey %>% 
+  mutate(yield_per_acre = BEANSHARVESTED_LR/LANDAREA) %>%
+    group_by(VILLAGE) %>%
+      summarise(mean= mean(yield_per_acre, na.rm=TRUE),
+                median=median(yield_per_acre, na.rm=TRUE),
+                standard_deviation=sd(yield_per_acre, na.rm=TRUE))
+```
+
+Another solution to address the missing value issue would be to filter out the households with missing value in the first place, using filter, for example at the very beginning:
+
+```{r}
+BeanSurvey %>% 
+  filter(is.na(BEANSHARVESTED_LR)==FALSE) %>%
+    mutate(yield_per_acre = BEANSHARVESTED_LR/LANDAREA) %>%
+      group_by(VILLAGE) %>%
+        summarise(mean= mean(yield_per_acre),
+                  median=median(yield_per_acre),
+                  standard_deviation=sd(yield_per_acre))
+```
+
+
+**Exercise 4b. How would you produce the same summary statistics, but by village AND by gender of the head of household rather than by village only?**
+
+
+**Answer
+
+We can just copy the code from the question 4 and add the column GENDERHH in the group_by() function. We then realise that the output shows an extra row because there is a missing value in the column GENDERHH. I decide to remove this household to have a neat output that answer the question
+
+
+```{r}
+BeanSurvey %>% 
+  filter(is.na(BEANSHARVESTED_LR)==FALSE & is.na(GENDERHH)==FALSE) %>%
+    mutate(yield_per_acre = BEANSHARVESTED_LR/LANDAREA) %>%
+      group_by(VILLAGE, GENDERHH) %>%
+        summarise(mean= mean(yield_per_acre),
+                  median=median(yield_per_acre),
+                  standard_deviation=sd(yield_per_acre))
+```
+
+
+**Exercise 5. Generate a scatterplot showing for each household who have planted beans, the total quantity of the beans planted against the land area of their farm. Color the points by gender of the head of household**
+
+
+**Answer
+
+We create variable total quantity of beans planted using mutate and then pipe into ggplot(). We realise after adding colours that we have - again - a missing value in the variable GENDERHH that is adding an extra NA category in our plot. We can decide if it's an issue or not. I decide to remove it and so I add a filter to get rid of the missing value.
+
+```{r}
+BeanSurvey %>%
+  mutate(total_beans_planted = BEANSPLANTED_LR + BEANSPLANTED_SR)%>%
+    filter(is.na(GENDERHH)==FALSE) %>%
+      ggplot(aes(x=LANDAREA, y=total_beans_planted, colour=GENDERHH))+
+        geom_point()
+```
+
+
+**Exercise 6. Generate a boxplot of the quantity of beans harvested during the long rain season by type of household composition, keeping only the two main household composition types. Apply an appropriate 'scale' transformation to the quantity of beans harvested**
+
+** Answer
+
+This is a follow up of a question from the ggplot exercises.
+We simply use filter to keep only the households whose composition type is either "Female headed, no husband" or "Male headed one wife", and then we pipe it into the plot that we had done in ggplot exercise.
+
+```{r}
+BeanSurvey %>%
+  filter(HHTYPE=="Female headed, no husband" | HHTYPE=="Male headed one wife") %>%
+    ggplot(aes(y=BEANSHARVESTED_LR, x=HHTYPE))+
+      geom_boxplot()+
+        geom_point()+
+          scale_y_continuous(trans="pseudo_log")
+
+```
+
