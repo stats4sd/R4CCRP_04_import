@@ -277,7 +277,7 @@ question("What is important for your data if you want to import it into R? (sele
 ## Exercises
 
 
-**Exercise 1: Now that you have imported the Fallow dataset into R – let’s do a quick exercise to recap what we learnt in Modules 1-3, but writing out the code entirely in RStudio instead of online.**
+**Exercise 1: Now that you have imported the Fallow dataset into R – let’s do a quick exercise to recap what we learnt in Modules 1-4, but writing out the code entirely in RStudio instead of online.**
 
 
 
